@@ -1,0 +1,4 @@
+$('#myModal2').remove()
+$('body').prepend('<%= j render "show_company_claims", company: @company %>')
+$('.modal-body2').html('<h3><%= @company.name %></h3> <%= j render "claim_form", company: @company, claim: Claim.new %>')
+$('#myModal2').modal()

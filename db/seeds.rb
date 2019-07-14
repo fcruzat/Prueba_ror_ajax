@@ -14,26 +14,26 @@ Claim.destroy_all
 20.times do
     Company.create(
         name: Faker::Company.name
-        )
-    end
+    )
+end
     
-    30.times do
-        User.create(
-            email: Faker::Internet.email,
-            password: 123456
-            )
-        end
+30.times do
+    User.create(
+        email: Faker::Internet.email,
+        password: 123456
+    )
+end
         
-        users = User.all
-        companies = Company.all
+users = User.all
+companies = Company.all
         
-        250.times do
-            Claim.create(
-                content: Faker::TvShows::RuPaul.quote,
-                user: users.sample,
-                company: companies.sample
-                )
-            end
+250.times do
+    Claim.create(
+        content: Faker::TvShows::RuPaul.quote,
+        user: users.sample,
+        company: companies.sample
+    )
+end
             
-            # AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
             
