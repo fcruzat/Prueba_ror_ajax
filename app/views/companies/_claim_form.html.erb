@@ -5,7 +5,7 @@
 <% end %>
 
 <ul id= "company_claims_list">
-   <% company.claims.each do |c| %>
+   <% company.claims.reverse_each do |c| %>
        <li><%= c.content %></li>
    <% end %>
 </ul>
